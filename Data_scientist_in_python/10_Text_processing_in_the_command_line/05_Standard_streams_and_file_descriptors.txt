@@ -1,0 +1,65 @@
+#**************************************************************************************************#
+#                                                                                                  #
+# 05_Standard_streams_and_file_descriptors                                                         #
+#                                                                                                  #
+# Authors: S.G.M. Neves                                                                            #
+#                                                                                                  #
+#**************************************************************************************************#
+
+1. Standard Streams
+find / -name 'dq' 2>stderr
+
+ls /home/inexistent 2>>stderr
+
+#--------------------------------------------------------------------------------------------------#
+
+2. Recap
+No code
+
+#--------------------------------------------------------------------------------------------------#
+
+3. Redirecting Two Streams
+ls /dev/null /home/inexistent >all_output 2>all_output
+
+cat all_output
+
+#--------------------------------------------------------------------------------------------------#
+
+4. File Descriptors
+No code
+
+#--------------------------------------------------------------------------------------------------#
+
+5. A New Point of View
+No code
+
+#--------------------------------------------------------------------------------------------------#
+
+6. Duplicating File Descriptors
+ls /dev/null /home/inexistent >all_output_v2 2>&1
+
+ls /dev/null /home/inexistent >/dev/null 2>&1
+
+#--------------------------------------------------------------------------------------------------#
+
+7. Order of Redirections
+ls /dev/null /home/inexistent 2>&1 1>redirection_order
+
+ls /dev/null /home/inexistent >order_verification
+
+diff -y redirection_order order_verification
+
+
+#--------------------------------------------------------------------------------------------------#
+
+8. Standard Input
+sort -u >sorted_stdin
+
+sort -u >sorted_stdin
+
+#--------------------------------------------------------------------------------------------------#
+
+9. Redirecting Standard Input
+tr [:lower:] [:upper:] <sorted_stdin
+
+tr [:lower:] [:upper:] <sorted_stdin >mad_vowels

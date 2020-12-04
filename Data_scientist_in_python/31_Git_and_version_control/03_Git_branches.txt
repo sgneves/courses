@@ -1,0 +1,123 @@
+#**************************************************************************************************#
+#                                                                                                  #
+# 03_Git_branches                                                                                  #
+#                                                                                                  #
+# Authors: S.G.M. Neves                                                                            #
+#                                                                                                  #
+#**************************************************************************************************#
+
+1. Introduction to Git Branches
+git clone /dataquest/user/git/chatbot
+
+cd chatbot
+
+git checkout -b more-speech
+
+python bot.py
+
+#--------------------------------------------------------------------------------------------------#
+
+2. Switching Branches
+git branch
+
+nano bot.py
+
+if __name__ == "__main__":
+    print("Hello, let's chat!")
+    print("What is your name?")
+
+git add bot.py
+
+git commit -m "Added more output"
+
+#--------------------------------------------------------------------------------------------------#
+
+3. Pushing a Branch to a Remote
+git branch -r
+git branch -a
+
+git push origin more-speech
+
+#--------------------------------------------------------------------------------------------------#
+
+4. Merging Branches
+git checkout master
+
+git merge more-speech
+
+git push origin master
+
+#--------------------------------------------------------------------------------------------------#
+
+5. Deleting Branches
+git branch -d more-speech
+
+#--------------------------------------------------------------------------------------------------#
+
+6. Checking Out Branches From the Remote
+cd ..
+
+git clone /dataquest/user/git/chatbot chatbot2
+
+cd chatbot2
+
+git checkout -b happy-bot
+
+nano bot.py
+
+if __name__ == "__main__":
+    print("Hello, let's chat!")
+    print("Happy day!")
+
+git add bot.py
+
+git commit -m "Made the bot 20% happier!"
+
+git push origin happy-bot
+
+cd ../chatbot
+
+git fetch
+
+git checkout happy-bot
+
+python bot.py
+
+#--------------------------------------------------------------------------------------------------#
+
+7. Finding Differences Across Branches
+git diff master happy-bot
+
+#--------------------------------------------------------------------------------------------------#
+
+8. Branch Naming Conventions
+git checkout -b feature/random-messages
+
+nano bot.py
+
+def main():
+
+	from random import randint
+
+    n = randint(0,3)
+
+    if n == 0:
+        print("Message one")
+    elif n == 1:
+        print("Message two")
+    else:
+        print("Message three")
+
+if __name__ == '__main__':
+    main()
+
+git add bot.py
+
+git commit -m "Modified bot.py to output random messages."
+
+git push origin feature/random-messages
+
+#--------------------------------------------------------------------------------------------------#
+
+9. Branch History
+git checkout -b feature/spam-messages

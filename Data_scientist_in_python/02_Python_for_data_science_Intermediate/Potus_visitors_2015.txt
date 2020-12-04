@@ -1,0 +1,8 @@
+0. name: The name of the visitor.
+1. appt_made_date: The date and time that the appointment was created.
+2. appt_start_date: The date and time that the appointment was scheduled to start.
+3. appt_end_date: The date and time that the appointment was scheduled to end.
+4. visitee_namelast: The last name of the visitee (the person the visitor was meeting with).
+5. visitee_namefirst: The first name of the visitee.
+6. meeting_room: The room in which the appointment was scheduled.
+7. description: Optional comments added by the WAVES operator.

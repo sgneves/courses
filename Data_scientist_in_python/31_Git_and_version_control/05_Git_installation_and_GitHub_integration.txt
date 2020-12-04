@@ -1,0 +1,40 @@
+#**************************************************************************************************#
+#                                                                                                  #
+# 05_Git_installation_and_GitHub_integration                                                       #
+#                                                                                                  #
+# Authors: S.G.M. Neves                                                                            #
+#                                                                                                  #
+#**************************************************************************************************#
+
+1. Introduction
+No code
+
+#--------------------------------------------------------------------------------------------------#
+
+2. Installing Git
+No code
+
+#--------------------------------------------------------------------------------------------------#
+
+3. Configuring Git
+git config --global user.name "Sergio Neves"
+
+git config --global user.email "sgneves@gmail.com"
+
+#--------------------------------------------------------------------------------------------------#
+
+4. Creating a GitHub Account
+No code
+
+#--------------------------------------------------------------------------------------------------#
+
+5. Authenticating with GitHub
+git clone https://github.com/sgneves/hello-world.git
+
+git checkout -b testbranch
+
+git add File.txt
+
+git commit -m "First commit"
+
+git push origin testbranch

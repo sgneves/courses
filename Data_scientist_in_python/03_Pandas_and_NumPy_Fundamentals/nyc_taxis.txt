@@ -1,0 +1,17 @@
+pickup_year: The year of the trip.
+pickup_month: The month of the trip (January is 1, December is 12).
+pickup_day: The day of the month of the trip.
+pickup_dayofweek
+pickup_time
+pickup_location_code: The airport or borough where the trip started.
+dropoff_location_code: The airport or borough where the trip finished.
+trip_distance: The distance of the trip in miles.
+trip_length: The length of the trip in seconds.
+fare_amount: The base fare of the trip, in dollars.
+fees_amount: Any fees added to the fare, eg surcharges, extras, and MTA taxes.
+tolls_amount: The amount of all tolls paid during the trip.
+tip_amount: The tip added by the customer - does not include cash tips.
+total_amount: The total amount charged to the passenger, including all fees, tolls and tips.
+payment_type: The payment type.
+
+Dataset data dictionary: https://s3.amazonaws.com/dq-content/289/nyc_taxi_data_dictionary.md
