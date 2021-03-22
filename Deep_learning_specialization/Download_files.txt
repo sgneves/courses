@@ -1,0 +1,20 @@
+
+1) Launch a Jupyter notebook.
+
+2) In the upper left corner, click on the Jupyter logo to go to the file tree view.
+
+3) Click the New, then select Terminal to open the system command line and paste the following command:
+
+tar cfzh workspace.tar.gz ~/W*
+
+4) Once the commands run successfully, click on the Jupyter logo again to return to the file view.
+
+5) In the file view, select workspace.tar.gz, then click Download.
+
+6) If your zip file is larger than 100MB, you will need to split it up into smaller files instead and download each of them, using the following command:
+
+tar cfzh - W* | split --bytes=100MB - workspace.tar.gz
+
+7) For extracting multiple files with 7-zip, use the first file (*.gzaa). Disregard the warning.
+
+URL: https://learner.coursera.help/hc/en-us/articles/360004990332-Download-Jupyter-Workspace-files

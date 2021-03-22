@@ -1,3 +1,0 @@
-document.getElementsByClassName("Pane vertical Pane1  ")[0].style.width = "100%";
-
-javascript:(function()%7Bdocument.getElementsByClassName(%22Pane%20vertical%20Pane1%20%20%22)%5B0%5D.style.width%20%3D%20%22100%25%22%7D)()
